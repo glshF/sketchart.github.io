@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <haed>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
@@ -158,9 +161,9 @@
         
 
         <div class="level-container begin"  >
-            <div class="lrncol" style="height: 800px; border: 1px solid rgb(179, 167, 167);;">
+            <div class="lrncol" style="height: 800px;">
                 <div style="width: full;height: 60px;background-image:linear-gradient(to bottom,white , rgb(214, 206, 206));"><h1>Sketching tips for a beginner</video></h1></div>
-                <div style="width: full;height: 680px;margin-top: 20px;overflow-y: scroll;">
+                <div style="width: full;height: 710px;margin-top: 20px;overflow-y: scroll;">
                 <ol>
                     <li><h2>know your pencil</h2>
                         Having the right pencil for your sketch is essential. The hardness of the graphite is indicated on 
@@ -188,7 +191,7 @@
             </div>
             <div class="lrncol" >
                 <div style="width: full;height: 60px;background-image:linear-gradient(to bottom,white , rgb(214, 206, 206));"><h1>Video tutorials</video></h1></div>
-                <div style="width: 95%; height: 65%;margin-left: 18px;margin-bottom: 20px;">
+                <div style="width: 95%; height: 65%;margin-left: 18px;margin-bottom: 20px;margin-top: 20px;">
                 <video  controls class="video" width="100%" height="100%" poster="./images/logo2.jpeg">
                     <source src="./images/bigvid1.mp4" type="video/mp4">
                 </video>
@@ -361,41 +364,61 @@
        
         Inspiration is much important for learning new thingg. Here we introduce you some artist.
         <div class="artist">
-            <div class="artigal">
+            <div data-aos="fade-down-right" class="artigal">
                 <img src="./images/arti1_1.png"  >
             </div>
 
-            <div class="artigal">
+            <div data-aos="fade-down class="artigal"  style="width: 100%;
+            min-height: 350px !important;
+            overflow: hidden;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            border-radius: 10px;
+            margin: 20px auto;">
                 <img src="./images/artist1.png" width="319px" height="318px">
             </div>
-            <div class="pic">
+            <div 
+            style="width: 100%;
+            height: auto;
+            padding: 10px ;
+            line-height:20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            align-content: center;
+            justify-content: center;
+            border-radius: 10px;
+            border: 1px solid black;
+            overflow: hidden;
+            margin: 20px auto;"
+             data-aos="fade-down class="pic">
                 <br>
-                <h3 style="color: rgb(85, 18, 241);font-size: 24;">Name : </h3>Nasim<br><br>
-                <h3 style="color: rgb(85, 18, 241);font-size: 24;">Country : </h3>Iran mashaad<br><br>
-                <h3 style="color: rgb(85, 18, 241);font-size: 24;">Master of Architecture</h3><br><br>
-                <h3 style="color: rgb(85, 18, 241);font-size: 24;">Instagram handle : </h3>na30mart<br><br>
+                <h3 style="color: rgb(85, 18, 241);font-size: 20;">Name : </h3>Nasim<br><br>
+                <h3 style="color: rgb(85, 18, 241);font-size: 20;">Country : </h3>Iran mashaad<br><br>
+                <h3 style="color: rgb(85, 18, 241);font-size: 20;">Master of Architecture</h3><br><br>
+                <h3 style="color: rgb(85, 18, 241);font-size: 20;">Instagram handle : </h3>na30mart<br><br>
                 <a href="https://www.instagram.com/na30mart/?hl=en"><img src="./images/iconinsta.jpg" width="50px" height="50px"></a>
             </div>
-            <div style="" class="artigal">
+            <div data-aos="fade-down-left" class="artigal">
                 <img src="./images/arti1_2.png"  >
             </div>
 
         </div>
-        <div class="artist">
-                <div style="" class="artigal">
+        <div  class="artist">
+                <div data-aos="fade-up-right" class="artigal">
                     <img src="./images/arti1_3.png"  >
                 </div>
 
-                <div style="" class="artigal">
+                <div data-aos="fade-up" class="artigal">
                         <img src="./images/arti1_4.png"  >
                 </div>
 
-                <div style="" class="artigal">
+                <div data-aos="fade-up" class="artigal">
                             <img src="./images/arti1_5.png"  >
                 </div>
                 
 
-                <div style="" class="artigal">
+                <div data-aos="fade-up-left" class="artigal">
                                     <img src="./images/arti1_6.png" >
                 </div>
                                     
@@ -406,15 +429,15 @@
 
 
          <div class="artist" >
-                <div style="" class="artigal">
+                <div data-aos="fade-down-right" class="artigal">
                 <img src="./images/arti2_1.png" >
                 </div>
-                <div class="artigal">
+                <div data-aos="fade-down" class="artigal">
                         <img src="./images/pic2.png" width="319px" height="318px">
                 </div>
 
            
-                <div class="pic">
+                <div data-aos="fade-down" class="pic">
                     <h3 style="color: rgb(85, 18, 241);font-size: 24;">Name : </h3>Ankita Mahta
                     <h3 style="color: rgb(85, 18, 241);font-size: 24;">Country : </h3>Uthrakhand, India
                     <h3 style="color: rgb(85, 18, 241);font-size: 24;">Instagram handle : </h3>begginers_archives<br>
@@ -424,7 +447,7 @@
                 </div>
 
             
-                <div style="" class="artigal">
+                <div data-aos="fade-down-left"  class="artigal">
                     <img src="./images/arti2_2.png" >
                 </div>
 
@@ -432,18 +455,18 @@
                                     
          </div>
 
-         <div class="artist">
-            <div style="" class="artigal">
+         <div  class="artist">
+            <div data-aos="fade-up-right" class="artigal">
                 <img src="./images/arti2_3.png">
             </div>
-            <div style="" class="artigal">
+            <div data-aos="fade-up" class="artigal">
                 <img src="./images/arti2_4.png">
             </div>
-            <div style="" class="artigal">
+            <div data-aos="fade-up" class="artigal">
                 <img src="./images/arti2_5.png">
             </div>
             
-            <div style="" class="artigal">
+            <div data-aos="fade-up-left" class="artigal">
                 <img src="./images/arti2_6.png">
             </div>
          </div>
@@ -558,7 +581,10 @@
             scrollTo(0,n);
         }
         </script>
-        
+         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+         <script>
+             AOS.init();
+           </script>
 
     
 </body>
