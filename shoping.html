@@ -1,138 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style>
-            body{ background-color: rgba(31, 29, 29, 0.082);}
-            .firstline
-            {
-                width: 100%;
-               height:60px;
-                background-color: rgb(36, 36, 206);
-            }
-            .firstline .search-container
-            {
-                margin-top: 13px;
-                float: right;
-                margin-right: 50px;
-            }
-
-
-            .login-container
-            {
-                display: none;
-                position: absolute;
-                top: 57px;
-                right: 270px;
-                background-color: #f1f1f1;
-                min-width: 160px;
-                min-height: 50px;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                z-index: 1
-            }
-            .login-container a{display: block;}
-
-             .login:hover>.login-container{display: block ;}   
-
-            .login-container a:hover {background-color: #ddd;}
-
-
-            .heading
-            {
-                height: 50px;
-                width: 100%;
-                font-size: 30px;
-                margin-top: 20px ;
-            }
-            .row{background-color: white; height: 340px;}
-            .col{float: left;height: 300px;margin-top: 20px;}
-            .myslide
-            {
-                animation-name: myslide ;
-                animation-duration: 1.5s;
-            }
-            @keyframes myslide
-            {
-                from{opacity: 0.6;}
-                to{opacity: 1;}
-            }
-            .myslide :hover,.myslide:focus{
-                cursor: pointer;
-            }
-            .product{background-color: white;margin-bottom: 50px;border: 1px solid rgba(0, 0, 0, 0.11); float: left; margin-right: 14px;width: 250px;height: 400px;}
-            .product img{
-               
-                width: 250px;
-                height: 250px;
-               
-            }
-            .product:hover 
-            {
-                
-                box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            }
-            #col23
-            {
-                box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            }
-            #mon1{text-decoration: line-through;color: rgba(0, 0, 0, 0.459);}
-            #rate{border: 1px solid green;border-radius: 4px; background-color: green;color: white;
-            }
-            .col2
-            {
-                float: left ;
-                background-color: white;
-            }
-            .top :hover {background-color: rgb(158, 148, 148);}
-            .last
-            {
-                width: 100%;
-                height: 250px;
-                border: 1px solid black;
-                background-color:rgb(39, 36, 36);
-                color: white;
-            }
-            .last .part
-            {
-                margin-top: 40px;
-                width: 200px;
-                float: left;
-            }
-            #abc,#sform
-            {
-                display: none;
-                box-shadow:0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                border: 2px solid rgb(167, 163, 163);
-                border-radius: 20px;
-            }
-            form input
-            {
-                border: 1px solid white;
-                margin-left: -150px;
-                width:200px ;
-                height: 35px;
-                box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            }
-            form span{ margin-left: -300px;}
-            .moreproduct
-            {
-                display: none;
-                position: absolute;
-                width: 200px;
-                min-height:200px;
-                box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            }
-            .moreproduct ul li
-            {
-                width: 100%;
-                border-bottom: 1px solid rgb(167, 164, 164);
-                list-style-type: none ;
-                margin-left: -20px;
-                height: 30px;
-                font-size: 18px;
-                
-            }
-            span.more:hover>.moreproduct{display: block;}
-        </style>
+        
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./shopping.css">
     </head>
 <body id="bdy" >
     <div class="firstline">
@@ -199,80 +70,129 @@
     </div>
    <div class="heading">TOP OFFER</div>
     <div class="row">
-        <div style="border: 1px solid rgb(226, 207, 207); width: 25%;margin-left: 4px;" class="col">
+        <div class="col">
             <a href="ofr1.html"><img src="./images/offer1.png" width="100%" height="100%" ></a>
         </div>
 
-        <div style="border: 1px solid rgb(226, 207, 207); width:47% ;margin-left: 1%;" class="col">
+        <div class="col">
            <div class="myslide">
-               <a href="eraser.html"><img src="./images/slide1.png" style="width: 100%;height:300px"></a>
+            <a href="eraser.html"><img src="./images/slide1.png" style="width: 100%;height:auto"></a>
            </div>
            <div class="myslide">
-               <img src="./images/slide2.png" style="width: 100%;height: 300px;">
+            <img src="./images/slide3.png" style="width: 100%;height: auto;">
            </div>
            <div class="myslide">
             <img src="./images/slide3.png" style="width: 100%;height: 300px;">
         </div>
         </div>
         
-        <div style="border: 1px solid rgb(226, 207, 207);width: 25%;margin-left: 1%;" class="col" >
+        <div  class="col" >
         <a href="pencil.html"><img onclick="func()" src="./images/offer2.png" width="100%" height="100%"></a>
         </div>
     </div>
     <div class="heading">TRENDING PRODUCTS</div>
-    <a href="pencil_18.html"><div class="product" ><img src="./images/p1.jpg">
-        <div><br><br> STOBOK DRAWING PENCIL SET <br><b><br>₹240</b>  <span id="mon1" >₹400</span><span style="color: green;">  40%off
-        </span><br><span id="rate"> 4.5 </span><span style="color: rgba(0, 0, 0, 0.445);">(30)</span></div>
-    </div></a>
-    <a href="trnd1.html"><div class="product"><img src="./images/p2.jpg">
-        <div><br><br> DYVICL PROFESSINAL DRAWING SKETCHING PENCIL SET-12 <br>PIECE <br><b><br>₹340</b><span id="mon1" >₹485</span><span style="color: green;">  30%off
-        </span><br><span id="rate"> 4.8 </span><span style="color: rgba(0, 0, 0, 0.445);">(45)</span></div></div></a>
-    <a href="trnd2.html"><div class="product"><img src="./images/p3.jpg">
-        <div><br><br> KNEADED ERASER<br><b><br>₹45</b>  <span id="mon1" >₹110</span><span style="color: green;">  60%off
-        </span><br><span id="rate"> 4.5 </span><span style="color: rgba(0, 0, 0, 0.445);">(40)</span></div></div></a>
-    <a href="eraser_13.html"><div class="product"><img src="./images/p5.jpg">
-        <div><br><br> TOMBOW ERASER <br><b><br>₹300</b>  <span id="mon1" >₹600</span><span style="color: green;">  50%off
-        </span><br><span id="rate"> 4.8 </span><span style="color: rgba(0, 0, 0, 0.445);">(80)</span></div></div></a>
-    <a href="trnd3.html"><div class="product"><img src="./images/p6.jpg">
-        <div><br><br> KABEER ART SRUMP SET OF 6PC<br><b><br>₹160</b>  <span id="mon1" >₹230</span><span style="color: green;">  35%off
-        </span><br><span id="rate"> 4.1 </span><span style="color: rgba(0, 0, 0, 0.445);">(17)</span></div></div></a>
+    <div class="row1">
+        <a href="pencil_18.html">
+            <div class="product"><img src="./images/p1.jpg">
+                <div><br><br> STOBOK DRAWING PENCIL SET <br><b><br>₹240</b> <span id="mon1">₹400</span><span
+                        style="color: green;"> 40%off
+                    </span><br><span id="rate"> 4.5 </span><span style="color: rgba(0, 0, 0, 0.445);">(30)</span></div>
+            </div>
+        </a>
+        <a href="trnd1.html">
+            <div class="product"><img src="./images/p2.jpg">
+                <div><br><br> DYVICL PROFESSINAL DRAWING SKETCHING PENCIL SET-12 <br>PIECE <br><b><br>₹340</b><span
+                        id="mon1">₹485</span><span style="color: green;"> 30%off
+                    </span><br><span id="rate"> 4.8 </span><span style="color: rgba(0, 0, 0, 0.445);">(45)</span></div>
+            </div>
+        </a>
+        <a href="trnd2.html">
+            <div class="product"><img src="./images/p3.jpg">
+                <div><br><br> KNEADED ERASER<br><b><br>₹45</b> <span id="mon1">₹110</span><span style="color: green;">
+                        60%off
+                    </span><br><span id="rate"> 4.5 </span><span style="color: rgba(0, 0, 0, 0.445);">(40)</span></div>
+            </div>
+        </a>
+        <a href="eraser_13.html">
+            <div class="product"><img src="./images/p5.jpg">
+                <div><br><br> TOMBOW ERASER <br><b><br>₹300</b> <span id="mon1">₹600</span><span style="color: green;">
+                        50%off
+                    </span><br><span id="rate"> 4.8 </span><span style="color: rgba(0, 0, 0, 0.445);">(80)</span></div>
+            </div>
+        </a>
+        <a href="trnd3.html">
+            <div class="product"><img src="./images/p6.jpg">
+                <div><br><br> KABEER ART SRUMP SET OF 6PC<br><b><br>₹160</b> <span id="mon1">₹230</span><span
+                        style="color: green;"> 35%off
+                    </span><br><span id="rate"> 4.1 </span><span style="color: rgba(0, 0, 0, 0.445);">(17)</span></div>
+            </div>
+        </a>
+    </div>
+
     
     <div class="row2" >
-        <div class="col2" style=" width: 781px;height: 400px;border: 1px solid rgba(0, 0, 0, 0.274);"><img src="./images/add.png" width="100%" height="100%"></div>
-        <div id="col23" class="col2" style="width: 250px; margin-left: 14px;height: 400px;border: 1px solid rgba(0, 0, 0, 0.274);">
+    <div class="col1"><img src="./images/add.png" width="100%" height="auto"></div>
+    <div id="col23" class="col1">
             <img src="./images/check.png" width="250px" height="200px"><p style="text-align: center; color: rgba(0, 0, 0, 0.295);">
                  your delivery pincode<br>--<br>enter your pincode to check availability and fast delivery option </p>
                  <input style="padding-left: 10px;margin-left: 10px;width: 214px;height: 25px;" type="number" placeholder="ENTER PINCODE"><br>
                  <input id="pin" onclick="fpincheck()" style="background-color: rgb(77, 69, 69);color: white; margin-top: 16px;margin-left: 50px;width: 150px;height:30px;" type="submit" value="submit">
         </div>
-        <div id="col23" class="col2" style="width: 250px; margin-left: 14px;height: 400px;border: 1px solid rgba(0, 0, 0, 0.274);">
+        <div id="col23" class="col1"
+            style="width: 100%;  margin-top: 10px; height: 400px;border: 1px solid rgba(0, 0, 0, 0.274);">
             <center><p style="font-size: 35px;">Download sketchart app</p>
             <img src="./images/logo.jpeg" width="70px" height="70px">
             <a href="https://play.google.com/store?hl=en"><img src="./images/down1.png" width="200px" height="90px"></a>
             <img src="./images/down2.png" width="200px" height="70px"></center>
         </div>
     </div>
-    <a href="#top"><center><div class="top" style="height: 50px ;border: 1px solid black; margin-top: 900px; width:100%; color:white;background-color: rgb(90, 85, 85);"> back to top</div></center></a>
-    <div class="last" >
-        <div class="part" style="margin-left: 200px;"><p><b>Get to know as</b></p><p style="color: rgb(206, 195, 195);">about us<br><br>press releases<br><br>gift a smile</p></div>
+
+
     
-        <div class="part">
+<a href="#top">
+    <center>
+        <div class="top"
+            style="height: 50px ;border: 1px solid black; margin-top: 30px; width:100%; color:white;background-color: rgb(90, 85, 85);">
+            back to top</div>
+    </center>
+</a>
+        <div class="last">
+            <div class="part2">
+                <p><b>Get to know as</b></p>
+                <p style="color: rgb(206, 195, 195);">
+                    <a href="about.html"> about us</a><br><br>press releases<br><br>gift a smile</p>
+            </div>
+        
+        
+        
+            <div class="part2">
             <p><b>Connect with us</b></p>
-            <img  src="./images/iconfb.jpg" width="50px" height="50px">
-             <img style="margin-left: 10px;" src="./images/icontw.png" width="50px" height="50px">
+            <img src="./images/iconfb.jpg" width="50px" height="50px">
+            <img style="margin-left: 10px;" src="./images/icontw.png" width="50px" height="50px">
             <img style="margin-left: 10px;" src="./images/iconinsta.jpg" width="50px" height="50px">
         </div>
-        <div class="part" style="margin-left: 50px;">
-            <p><b>Make money with us</b></p><p </p><p style="color: rgb(206, 195, 195);">>sell on sketchart<br><br>sell under sketchart accelerator<br><br>addvertisement on sketchart</p>
+        <div class="part2" style="margin-left: 50px;">
+            <p><b>Make money with us</b></p>
+            <p </p>
+            <p style="color: rgb(206, 195, 195);">>sell on sketchart<br><br>sell under sketchart
+                accelerator<br><br>addvertisement on sketchart</p>
         </div>
-        <div class="part" style="margin-left: 50px;">
-            <p><b>Let us help you</b></p><p style="color: rgb(206, 195, 195);">your account<br><br>Return center<br><br>100% purchase protection</p>
+        <div class="part2" style="margin-left: 50px;">
+            <p><b>Let us help you</b></p>
+            <p style="color: rgb(206, 195, 195);">your account<br><br>Return center<br><br>100% purchase protection</p>
         </div>
     </div>
-    <div style="border: 1px solid rgb(204, 191, 191); width: 100%;height: 60px;background-color:rgb(39, 36, 36);">
-        <p style="color: rgb(235, 228, 228);float: right;margin-right: 30px">Made in India</p>
-        <img src="./images/logo.jpeg" width="30px" height="30px" style="float: right;margin-right: 10px;margin-top: 10px;">
-        <center><p style="color:rgb(235, 228, 228) ;">Copyright © 2020 All Rights Reserved. NIT Kurukshetra | Designed and developed by Gaurav Saini</p></center>
+    <div
+        style="border: 1px solid rgb(204, 191, 191); width: 100%;height: 60px;background-color:rgb(39, 36, 36); display: grid; grid-template-columns: 1fr;">
+        <center>
+            <p style="color: rgb(235, 228, 228);">Made in India</p>
+        </center>
+        <center><img src="./images/logo.jpeg" width="30px" height="30px" style="margin-right: 10px;margin-top: 10px;">
+        </center>
+        <center>
+            <p style="color:rgb(235, 228, 228) ;background-color: gray;">Copyright © 2020 All Rights Reserved. NIT
+                Kurukshetra | Designed and developed by Gaurav Saini</p>
+        </center>
     </div>
     <p id="demo"></p>
     <script>
