@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         .class1
         {
@@ -12,8 +18,13 @@
             border-radius: 50%;
             margin-top: 20px;
         }
-        .gallery img{float: left ; margin-right: 20px;margin-bottom: 20px;}
-        .gallery img:hover{box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+        .pics{float: left ; margin-right: 20px;margin-bottom: 20px;width: 250px;height: 250px;
+        box-shadow: 5px 10px 18px #888888;
+        border: 1px solid rgb(202, 184, 184) ;
+        border-radius: 6px;
+        }
+        .pics img{border-image:1px solid rgb(202, 184, 184) ;border-radius: 6px;}
+        
     </style>
 </head>
 <body>
@@ -46,16 +57,22 @@
         Phone no. - 9509931431<br><br>
         address - NIT, Thanesar, Haryana 136119 Chakradhar Bhavan (Hostel 3), address
     </div>
-    <div class="gallery" style="width: 1080px; min-height: 300px;margin-left: 140px;">
-    <img  width="250px" height="250px" src="./images/gal9.jpg">
-    <img width="250px" height="250px" src="./images/gal1.jpg">
-    <img width="250px" height="250px" src="./images/gal2.jpg">
-    <img width="250px" height="250px" src="./images/gal3.jpg">
-    <img width="250px" height="250px" src="./images/gal4.jpg">
-    <img width="250px" height="250px" src="./images/gal5.jpg">
-    <img width="250px" height="250px" src="./images/gal6.jpg">
-    <img width="250px" height="250px" src="./images/gal8.jpg">
+    <div class="gallery" style="width: 90% ;margin-left: 5%;">
+    <div data-aos="zoom-in" class="pics"><img  width="100%" height="100%" src="./images/gal9.jpg"></div>
+    <div data-aos="zoom-in" class="pics"><img width="100%" height="100%" src="./images/gal1.jpg"></div>
+    <div data-aos="zoom-in" class="pics"><img width="100%" height="100%" src="./images/gal2.jpg"></div>
+    <div data-aos="zoom-in" class="pics"><img width="100%" height="100%" src="./images/gal3.jpg"></div>
+    <div data-aos="zoom-in" class="pics"><img width="100%" height="100%" src="./images/gal4.jpg"></div>
+    <div data-aos="zoom-in" class="pics"><img width="100%" height="100%" src="./images/gal5.jpg"></div>
+    <div data-aos="zoom-in" class="pics"><img width="100%" height="100%" src="./images/gal6.jpg"></div>
+    <div data-aos="zoom-in" class="pics"><img width="100%" height="100%" src="./images/gal8.jpg"></div>
     
     </div>
 </div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+  </script>
 </body>
