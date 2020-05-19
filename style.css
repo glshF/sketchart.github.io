@@ -124,7 +124,7 @@ html{scroll-behavior: smooth;}
         .col
         {
             
-           border: 1px solid rgb(209, 198, 198);
+          
            display: flex;
            align-content: center;
            justify-content: center;
@@ -180,13 +180,13 @@ html{scroll-behavior: smooth;}
             width: 100%;
             height: auto;
             padding: 10px ;
-            line-height:15px;
+            line-height:14px;
             display: grid;
             grid-template-columns: 1fr;
             align-content: center;
             justify-content: center;
             border-radius: 10px;
-            border: 1px solid black;
+            border: 2px solid rgb(214, 202, 202);
             overflow: hidden;
             margin: 20px auto;
             
