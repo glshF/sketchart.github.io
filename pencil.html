@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .firstline
+            {
+                width: 100%;
+               height:60px;
+                background-color: rgb(36, 36, 206);
+            }
+            .firstline .search-container
+            {
+                margin-top: 13px;
+                float: right;
+                margin-right: 50px;
+            }
+
+
+            .login-container
+            {
+                display: none;
+                position: absolute;
+                top: 57px;
+                right: 270px;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                min-height: 50px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1
+            }
+            .login-container a{display: block;}
+
+             .login:hover>.login-container{display: block ;}   
+
+            .login-container a:hover {background-color: #ddd;}
+            #abc,#sform
+            {
+                display: none;
+                box-shadow:0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                border: 2px solid rgb(167, 163, 163);
+                border-radius: 20px;
+            }
+            form input
+            {
+                border: 1px solid white;
+                margin-left: -150px;
+                width:200px ;
+                height: 35px;
+                box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            form span{ margin-left: -300px;}
+
+            .col
+            {
+                height: 910px;
+                
+                float: left;
+            }
+            .product
+            {
+                background-color: white;margin-bottom: 50px;border: 1px solid rgba(0, 0, 0, 0.11); float: left;;width: 250px;height: 400px;
+            }
+            .product img{
+               
+               width: 250px;
+               height: 250px;
+              
+           }
+           .product:hover 
+            {
+                
+                box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+           #mon1{text-decoration: line-through;color: rgba(0, 0, 0, 0.459);}
+            #rate{border: 1px solid green;border-radius: 4px; background-color: green;color: white;}
+                .last
+            {
+                width: 100%;
+                height: 250px;
+                border: 1px solid black;
+                background-color:rgb(39, 36, 36);
+                color: white;
+            }
+            .last .part
+            {
+                margin-top: 40px;
+                width: 200px;
+                float: left;
+            }
+        </style>
+    </head>
+<body style="  background-color: rgb(235, 235, 245);   ">
+    <div class="firstline">
+        <img src="logo.jpeg" width="32px" height="32px" style="border: 1px solid black; margin-left: 100px;margin-top: 13px;">
+        <span style="color: yellow;font-size: 44px;margin-bottom: 15px;margin-left: 10px;" id="check">sketchart</span>
+        <div class="search-container">
+            <input  style="min-width: 400px;height: 30px;padding-left: 20px;" type="text" value="search products " id="name">
+            <input style="min-width: 70px;height: 36px;margin-left: -5px;"  onclick="search()"  type="submit" value="search">
+
+
+            <button class="login" style="min-width: 70px;height: 36px;margin-left: 100px;background-color:white;color:blue;">
+                <b >Login</b>
+                <div  class="login-container">
+                    <a  style="position: relative; padding-bottom: 15px;padding-top:10px;" href="#"><b onclick="func()">New customer?</b><span style="color: blue;">   sign up</span>
+                    <div id="abc" style="background-color: white;position: absolute;right: 160px;width: 450px;height: 500px;">
+                    <img style="border-radius: 18px;" src="heading.png" width="100%" height="80px">
+                    <b style="font-size: 24px;">Ragistraton Form</b><br>
+                   <form class="myform"  method="POST" >
+                       <span>name</span><br>
+                       <input  type="text" id="rfname" ><br><br>
+                       <span>mobile no</span><br>
+                       <input type="number" id="rgmobno"><br><br>
+                       <span>gmail</span><br>
+                       <input type="email" id="rfgmail" ><br><br>
+                       <span>password</span><br>
+                       <input type="password" id="rfpass"><br><br>
+                       <span style="margin-left:-250px;">confirm password</span><br>
+                       <input type="password" id="rfcpass"><br><br>
+                       <input  type="text" onclick="return validate()" value="submit" style="padding-left: 20px; background-color:blue;color: white;float: right;width: 70px;margin-right: 20px;">
+                   </form>
+                    </div>
+                    </a>
+                    <a style="padding-bottom: 15px;padding-top:10px;" href="#"><b onclick="sign()" style="color: blue;">Sign in</b>
+                        <div id="sform" style="background-color: white;position: absolute;top:50px;right: 160px;width:450px;height: 240px;">
+                            <b style="font-size:24px; ">Enter your details</b><br>
+                           <form class="myform"  method="POST" >
+                               <span>mobile no</span><br>
+                               <input type="number" id="rgmobno"><br><br>
+                               <span>password</span><br>
+                               <input type="password" id="rfpass"><br><br><br>
+                               <span style="color: blue;">forgot password</span>
+                               <input onclick="sfsubmit()" type="text" value="submit" style="padding-left: 20px; background-color:blue;color: white;float: right;width: 70px;margin-right: 20px;">
+                           </form>
+                            </div>
+                    </a>
+                </div>
+            </button>
+
+
+            <span class="more" style="position: relative; margin-left: 65px;font-size: 24px; color: white;"><b >more</b> </span>
+               
+           
+            <span style="margin-left: 65px;font-size: 24px; color: white;">
+                cart<img style="margin-left: 10px;" src="cart.png" width="20px" height="20px"> </span>
+           
+            </div>
+    </div>
+
+
+    <div class="row" style="height: 1000px; width: 100%; margin-top: 20px;">
+        <div class="col" style="width: 22%;" >
+            <a href="https://www.jerrysartarama.com/promotions/2020/cezanne-120ct-intro-offer"><img src="addver.jpg" width="100%" height="500px"></a>
+        </div>
+        <div class="col" style="margin-left: 14px;width: 76.5%;background-color: white;border: 1px solid rgb(204, 195, 195);" >
+            <h3 style="margin-left: 10px;">Showing 13 result for "graphite and charcol pencil" </h3>
+            <a href="pencil_11.html"><div class="product" style="margin-left: 10px;"><img src="pencil11.jpeg">
+                <div><br><br> APSARA DRAWING 7B PENCIL OF PACK 10  <br><b><br>₹70 </b><span id="mon1" >₹100</span><span style="color: green;">  30%off
+                </span><br><span id="rate"> 4.8 </span><span style="color: rgba(0, 0, 0, 0.445);">(45)</span></div></div></a>
+
+                <a href="pencil_12.html"> <div class="product"><img src="pencil21.jpeg">
+                <div><br><br> Apsara Graphite MULTICOLOUR WOODEN PENCIL Pencil  (Pack of 30)  <br><b><br>₹148 </b><span id="mon1" >₹150</span><span style="color: green;">  1%off
+                </span><br><span id="rate"> 4.5 </span><span style="color: rgba(0, 0, 0, 0.445);">(75)</span></div></div></a>
+                
+                <a href="pencil_13.html"> <div class="product"><img src="pencil31.jpeg">
+                <div><br><br> Aavjo Graphite 12B, 10B, 8B, 7B, 6B, 5B, 4B, 3B, 2B, 1B, HB, 2H, 4H, 6H Pencil  (Pack of 14)<br><b><br>₹399 </b><span id="mon1" >₹599</span><span style="color: green;">  33%off
+                </span><br><span id="rate"> 4.6 </span><span style="color: rgba(0, 0, 0, 0.445);">(85)</span></div></div></a>
+            
+                <a href="pencil_14.html"> <div class="product"><img src="pencil42.jpeg">
+                <div><br><br> Faber-Castell Graphite 2H, H, HB, B, 2B, 4B, 6B Pencil  (Pack of 8)<br><b><br>₹268 </b><span id="mon1" >₹300</span><span style="color: green;">  10%off
+                </span><br><span id="rate"> 4.9 </span><span style="color: rgba(0, 0, 0, 0.445);">(90)</span></div></div></a>
+            
+                <a href="pencil_15.html"> <div class="product" style="margin-left: 10px;"><img src="pencil51.jpeg">
+                <div><br><br> Worison White Colored Charcoal Pencil for Drawing Shading Round Shaped Color Pencils  (Set of 3, White)<br><b><br>₹199 </b><span id="mon1" >₹349</span><span style="color: green;">  42%off
+                </span><br><span id="rate"> 4.9 </span><span style="color: rgba(0, 0, 0, 0.445);">(97)</span></div></div></a>
+
+                <a href="pencil_16.html"> <div class="product"><img src="pencil61.jpeg">
+                <div><br><br> Mont Marte White charcoal Pencil Set<br><b><br>₹299 </b><span id="mon1" >₹599</span><span style="color: green;">  50%off
+                </span><br><span id="rate"> 4.3 </span><span style="color: rgba(0, 0, 0, 0.445);">(97)</span></div></div></a>
+
+                <a href="pencil_17.html"> <div class="product"><img src="pencil71.jpeg">
+                <div><br><br> Futurekart 9 Pcs Professional Sketching  with Graphite Pencils, Charcoal Pencils<br><b><br>₹174 </b><span id="mon1" >₹349</span><span style="color: green;">  61%off
+                </span><br><span id="rate"> 4.5 </span><span style="color: rgba(0, 0, 0, 0.445);">(56)</span></div></div></a>
+
+                <a href="pencil_18.html"> <div class="product"><img src="pencil81.jpeg">
+                <div><br><br> WORISON Graphite Soft Medium Hard Pencil  (Pack of 3)<br><b><br>₹949 </b><span id="mon1" >₹999</span><span style="color: green;">  7%off
+                </span><br><span id="rate"> 4.7 </span><span style="color: rgba(0, 0, 0, 0.445);">(120)</span></div></div></a>
+            
+        </div>
+    </div>
+
+    <a href="#top"><center><div class="top" style="height: 50px ;border: 1px solid black; margin-top: -20px; width:100%; color:white;background-color: rgb(90, 85, 85);"> back to top</div></center></a>
+    <div class="last" >
+        <div class="part" style="margin-left: 200px;"><p><b>Get to know as</b></p><p style="color: rgb(206, 195, 195);">about us<br><br>press releases<br><br>gift a smile</p></div>
+    
+        <div class="part">
+            <p><b>Connect with us</b></p>
+            <img  src="iconfb.jpg" width="50px" height="50px">
+             <img style="margin-left: 10px;" src="icontw.png" width="50px" height="50px">
+            <img style="margin-left: 10px;" src="iconinsta.jpg" width="50px" height="50px">
+        </div>
+        <div class="part" style="margin-left: 50px;">
+            <p><b>Make money with us</b></p><p </p><p style="color: rgb(206, 195, 195);">>sell on sketchart<br><br>sell under sketchart accelerator<br><br>addvertisement on sketchart</p>
+        </div>
+        <div class="part" style="margin-left: 50px;">
+            <p><b>Let us help you</b></p><p style="color: rgb(206, 195, 195);">your account<br><br>Return center<br><br>100% purchase protection</p>
+        </div>
+    </div>
+    <div style="border: 1px solid rgb(204, 191, 191); width: 100%;height: 60px;background-color:rgb(39, 36, 36);">
+        <p style="color: rgb(235, 228, 228);float: right;margin-right: 30px">Made in India</p>
+        <img src="logo.jpeg" width="30px" height="30px" style="float: right;margin-right: 10px;margin-top: 10px;">
+        <center><p style="color:rgb(235, 228, 228) ;">Copyright © 2020 All Rights Reserved. NIT Kurukshetra | Designed and developed by Gaurav Saini</p></center>
+    </div>
+
+    <script>
+        function search()
+        {
+            
+            var str=document.getElementById('name').value;
+            var pos1=str.indexOf("pencil");
+            var pos2=str.indexOf("era");
+            var pos3=str.indexOf("paper");
+            var pos4=str.indexOf("colo");
+            var pos5=str.indexOf("blend");
+            if(pos1!=-1)
+            {
+                window.open("pencil.html");
+            }
+            else if(pos2!=-1)
+            {
+                window.open("eraser.html");
+            }
+            else if(pos3!=-1)
+            {
+                window.open("paper.html");
+            }
+            else if(pos4!=-1)
+            {
+                window.open("color.html");
+            }
+            else if(pos5!=-1)
+            {
+                window.open("blend.html");
+            }
+
+        }
+        function func()
+        {
+            if( document.getElementById('abc').style.display!="block")
+          { document.getElementById('abc').style.display="block";}
+          else
+          { document.getElementById('abc').style.display="none";}
+            
+        }
+        function sign()
+        {
+            if( document.getElementById('sform').style.display!="block")
+          { document.getElementById('sform').style.display="block";}
+          else
+          { document.getElementById('sform').style.display="none";}
+            
+        }
+        fu
+        function fsubmit(){document.getElementById('abc').style.display="none";}
+        function sfsubmit(){document.getElementById('sform').style.display="none";}
+        function validate()
+        {
+            var fname=document.getElementById('rfname').value;
+            if(fname=="")
+            {
+                alert("please enter your name");
+                return false;
+            }
+           
+            var gmail=document.getElementById('rfgmail').value;
+            if(gmail=="")
+            {
+                alert("please enter your gmail");
+                return false;
+            }
+            var pass=document.getElementById('rfpass').value;
+            if(pass=="")
+            {
+                alert("please enter your password");
+                return false;
+            }
+            var cpass=document.getElementById('rfcpass').value;
+            if(cpass=="")
+            {
+                alert("please enter your confirm password");
+                return false;
+            }
+            if(pass!=cpass)
+            {
+                alert("please reconfirm your password");
+                return false;
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>

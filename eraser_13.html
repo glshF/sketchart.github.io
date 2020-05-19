@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .firstline
+            {
+                width: 100%;
+               height:60px;
+                background-color: rgb(36, 36, 206);
+            }
+            .firstline .search-container
+            {
+                margin-top: 13px;
+                float: right;
+                margin-right: 50px;
+            }
+
+
+            .login-container
+            {
+                display: none;
+                position: absolute;
+                top: 57px;
+                right: 270px;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                min-height: 50px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1
+            }
+            .login-container a{display: block;}
+
+             .login:hover>.login-container{display: block ;}   
+
+            .login-container a:hover {background-color: #ddd;}
+            #abc,#sform
+            {
+                display: none;
+                box-shadow:0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                border: 2px solid rgb(167, 163, 163);
+                border-radius: 20px;
+            }
+            form input
+            {
+                border: 1px solid white;
+                margin-left: -150px;
+                width:200px ;
+                height: 35px;
+                box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            form span{ margin-left: -300px;}
+
+            .col
+            {
+                border: 1px solid black;
+                float: left;
+                height: 630px;
+                margin-bottom: 10px;
+            }
+            .slideshow-container
+            {
+                margin-top: 26px;
+                height: 16px;
+                width: 100%;
+            }
+            .dot 
+            {
+                float: left;
+                margin-left: 20px;
+                height: 16px;
+                width: 16px;
+                border: 1px solid rgb(218, 196, 196);
+                border-radius: 50%;
+                background-color: rgb(218, 196, 196);
+                
+            }
+            .slides {
+                border: 2px solid rgb(245, 233, 233);
+                width: 420;height: 380px;margin-left: 24px;margin-top: 24px;
+                animation-name: img ;
+                animation-duration: 1.5s;}
+            @keyframes img
+            {
+                from{opacity: 0.6;}
+                to{opacity: 1;}
+            }
+            .detail {margin-top: 30px; width: cover;min-height: 100px;margin-top: 20px;}
+            .dlvry1
+            {
+                float: left;
+                margin-left: 20px;
+                min-height: 100px;
+                
+            }
+            input{width: 150x; height: 30px;border: 1px solid blueviolet; border-radius: 4px;}
+            .dot2{width: 10px;height: 10px;border: 1px solid black;border-radius: 50%;}
+            .product{background-color: white;margin-bottom: 50px;border: 1px solid rgba(0, 0, 0, 0.11); float: left; margin-right: 14px;width: 250px;height: 400px;}
+            .product img{
+               
+                width: 250px;
+                height: 250px;
+               
+            }
+            .product:hover 
+            {
+                
+                box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+            #mon1{text-decoration: line-through;color: rgba(0, 0, 0, 0.459);}
+            #rate{border: 1px solid green;border-radius: 4px; background-color: green;color: white;}
+            .last
+            {
+                width: 100%;
+                height: 250px;
+                border: 1px solid black;
+                background-color:rgb(39, 36, 36);
+                color: white;
+            }
+            .last .part
+            {
+                margin-top: 40px;
+                width: 200px;
+                float: left;
+            }
+        </style>
+    </head>
+<body>
+    <div class="firstline">
+        <img src="logo.jpeg" width="32px" height="32px" style="border: 1px solid black; margin-left: 100px;margin-top: 13px;">
+        <span style="color: yellow;font-size: 44px;margin-bottom: 15px;margin-left: 10px;" id="check">sketchart</span>
+        <div class="search-container">
+            <input  style="min-width: 400px;height: 30px;padding-left: 20px;" type="text" value="search products " id="name">
+            <input style="min-width: 70px;height: 36px;margin-left: -5px;"  onclick="search()"  type="submit" value="search">
+
+
+            <button class="login" style="min-width: 70px;height: 36px;margin-left: 100px;background-color:white;color:blue;">
+                <b >Login</b>
+                <div  class="login-container">
+                    <a  style="position: relative; padding-bottom: 15px;padding-top:10px;" href="#"><b onclick="func()">New customer?</b><span style="color: blue;">   sign up</span>
+                    <div id="abc" style="background-color: white;position: absolute;right: 160px;width: 450px;height: 500px;">
+                    <img style="border-radius: 18px;" src="heading.png" width="100%" height="80px">
+                    <b style="font-size: 24px;">Ragistraton Form</b><br>
+                   <form class="myform"  method="POST" >
+                       <span>name</span><br>
+                       <input  type="text" id="rfname" ><br><br>
+                       <span>mobile no</span><br>
+                       <input type="number" id="rgmobno"><br><br>
+                       <span>gmail</span><br>
+                       <input type="email" id="rfgmail" ><br><br>
+                       <span>password</span><br>
+                       <input type="password" id="rfpass"><br><br>
+                       <span style="margin-left:-250px;">confirm password</span><br>
+                       <input type="password" id="rfcpass"><br><br>
+                       <input  type="text" onclick="return validate()" value="submit" style="padding-left: 20px; background-color:blue;color: white;float: right;width: 70px;margin-right: 20px;">
+                   </form>
+                    </div>
+                    </a>
+                    <a style="padding-bottom: 15px;padding-top:10px;" href="#"><b onclick="sign()" style="color: blue;">Sign in</b>
+                        <div id="sform" style="background-color: white;position: absolute;top:50px;right: 160px;width:450px;height: 240px;">
+                            <b style="font-size:24px; ">Enter your details</b><br>
+                           <form class="myform"  method="POST" >
+                               <span>mobile no</span><br>
+                               <input type="number" id="rgmobno"><br><br>
+                               <span>password</span><br>
+                               <input type="password" id="rfpass"><br><br><br>
+                               <span style="color: blue;">forgot password</span>
+                               <input onclick="sfsubmit()" type="text" value="submit" style="padding-left: 20px; background-color:blue;color: white;float: right;width: 70px;margin-right: 20px;">
+                           </form>
+                            </div>
+                    </a>
+                </div>
+            </button>
+
+
+            <span class="more" style="position: relative; margin-left: 65px;font-size: 24px; color: white;"><b >more</b> </span>
+               
+           
+            <span style="margin-left: 65px;font-size: 24px; color: white;">
+                cart<img style="margin-left: 10px;" src="cart.png" width="20px" height="20px"> </span>
+           
+            </div>
+    </div>
+    <div class="row" >
+        <div class="col" style="width: 35%;">
+            <img width="410px" height="100%" class="slides" src="eraser31.jpeg" >
+            <img width="410px" height="100%" class="slides" src="eraser32.jpeg" style="display: none;">
+            <img width="410px" height="100%" class="slides" src="eraser33.jpeg" style="display: none;">
+            <div class="slideshow-container">
+                <div onclick="fdot(1)" class="dot" style="background-color: black; margin-left: 190px;"></div>
+                <div onclick="fdot(2)" class="dot"></div>
+                <div onclick="fdot(3)" class="dot"></div>
+            </div>
+            <div style="border: 1px solid orange; border-radius: 5px; margin-top: 20px;margin-left: 126px; color: blue; font-size: 40px; width: 200px; height: 50px;background-color: rgb(231, 182, 22);">
+                <b style="margin-left: 20px;">Buy now</b>
+            </div>
+        </div>
+        <div class="col" style="width: 63.5%; margin-left: 1%;">
+            <div style="font-size: 20px;padding-left: 10px;height: 30px;width: cover;margin-top: 20px;">
+                Tombow Mono Drawing Pencil, Combo Pack with Zero Eraser, Graphite 6 Pack
+            </div>
+            <span style="margin-left: 10px; background-color: green;color: white;border: 1px solid green; border-radius: 3px;width: 45px;height: 2opx;">4.5</span>
+            <span style="font-size: 17px; color: rgb(129, 110, 110);">  200 Rating</span><br><br>
+            <span style="font-size: 34px;margin-left: 20px;"><b>₹899</b></span>
+            <span style="font-size: 20px;margin-left: 20px;color: rgb(122, 113, 113); text-decoration: line-through;"> ₹1600</span>
+            <span style="font-size: 25px;margin-left: 20px;color: green;"><b>44% off</b></span><br>
+            <span style="margin-left: 20px;font-size: 20px;"><b>Avaiable offer</b></span><br>
+            <span style="margin-left: 20px;">    <b>Bank Offer</b></span>
+            <span> 5% Unlimited Cashback on Flipkart Axis Bank Credit Card</span>
+            <span style="color: blue;"> T&C</span>
+            <div class="detail">
+                <div class="dlvry1" style="width: 200px;color: rgb(148, 130, 130);">
+                    <b>Delivery</b>
+                </div>
+                <div class="dlvry1" style="width:500px;">
+                    <input type="number" placeholder="  enter PIN code" class="pin">
+                    <input type="submit" value="check" style="background-color: blue; color: white;"><br><br>
+                    <b>Usually delivered in3-4 days</b><br>
+                    Enter pincode for exact delivery dates/charges
+                </div>
+            </div>
+            <div class="detail" >
+                <div class="dlvry1" style="width: 200px;color: rgb(148, 130, 130);">
+                    <b>Highlight</b>
+                </div>
+                <div class="dlvry1" style="width: cover;">
+                   <ul style="margin-left: -20px;margin-top: 0px;">
+                       <li>age 5+ years</li>
+                       <li>Pack of 1</li>
+                       <li>Non toxic</li>
+                   </ul>
+                </div>
+            </div>
+            <div class="detail" style="height: 200px;">
+                <div class="dlvry1" style="width: 200px;color: rgb(148, 130, 130);">
+                    <b>Desciption</b>
+                </div>
+                <div class="dlvry1" style="width:500px;">
+                    Description: The color and packaging of the delivered product may 
+                    vary slightly from what is shown in the image, but the contents will remain the same
+                
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+    <div style="font-size: 30px;margin:20px 20px 10px 20px;padding-top: 10px;">Similar Products</div>
+    <div class="product" ><img src="p1.jpg">
+        <div><br><br> STOBOK DRAWING PENCIL SET <br><b><br>₹240</b>  <span id="mon1" >₹400</span><span style="color: green;">  40%off
+        </span><br><span id="rate"> 4.5 </span><span style="color: rgba(0, 0, 0, 0.445);">(30)</span></div>
+    </div>
+    <div class="product"><img src="p2.jpg">
+        <div><br><br> DYVICL PROFESSINAL DRAWING SKETCHING PENCIL SET-12 <br>PIECE <br><b><br>₹340</b><span id="mon1" >₹485</span><span style="color: green;">  30%off
+        </span><br><span id="rate"> 4.8 </span><span style="color: rgba(0, 0, 0, 0.445);">(45)</span></div></div>
+    <div class="product"><img src="p3.jpg">
+        <div><br><br> KNEADED ERASER<br><b><br>₹45</b>  <span id="mon1" >₹110</span><span style="color: green;">  60%off
+        </span><br><span id="rate"> 4.5 </span><span style="color: rgba(0, 0, 0, 0.445);">(40)</span></div></div>
+    <div class="product"><img src="p5.jpg">
+        <div><br><br> TOMBOW ERASER <br><b><br>₹300</b>  <span id="mon1" >₹600</span><span style="color: green;">  50%off
+        </span><br><span id="rate"> 4.8 </span><span style="color: rgba(0, 0, 0, 0.445);">(80)</span></div></div>
+    <div class="product"><img src="p6.jpg">
+        <div><br><br> KABEER ART SRUMP SET OF 6PC<br><b><br>₹160</b>  <span id="mon1" >₹230</span><span style="color: green;">  35%off
+        </span><br><span id="rate"> 4.1 </span><span style="color: rgba(0, 0, 0, 0.445);">(17)</span></div></div>
+        <div class="last" style="margin-top: 420px;" >
+        <div class="part" style="margin-left: 200px;"><p><b>Get to know as</b></p><p style="color: rgb(206, 195, 195);">about us<br><br>press releases<br><br>gift a smile</p></div>
+    
+        <div class="part">
+            <p><b>Connect with us</b></p>
+            <img  src="iconfb.jpg" width="50px" height="50px">
+             <img style="margin-left: 10px;" src="icontw.png" width="50px" height="50px">
+            <img style="margin-left: 10px;" src="iconinsta.jpg" width="50px" height="50px">
+        </div>
+        <div class="part" style="margin-left: 50px;">
+            <p><b>Make money with us</b></p><p </p><p style="color: rgb(206, 195, 195);">>sell on sketchart<br><br>sell under sketchart accelerator<br><br>addvertisement on sketchart</p>
+        </div>
+        <div class="part" style="margin-left: 50px;">
+            <p><b>Let us help you</b></p><p style="color: rgb(206, 195, 195);">your account<br><br>Return center<br><br>100% purchase protection</p>
+        </div>
+    </div>
+    <div style="border: 1px solid rgb(204, 191, 191); width: 100%;height: 60px;background-color:rgb(39, 36, 36);">
+        <p style="color: rgb(235, 228, 228);float: right;margin-right: 30px">Made in India</p>
+        <img src="logo.jpeg" width="30px" height="30px" style="float: right;margin-right: 10px;margin-top: 10px;">
+        <center><p style="color:rgb(235, 228, 228) ;">Copyright © 2020 All Rights Reserved. NIT Kurukshetra | Designed and developed by Gaurav Saini</p></center>
+    </div>
+    
+    <script>
+        function fdot(n)
+        {
+            var i,j;
+            var slide=document.getElementsByClassName("slides");
+            for(i=0;i<slide.length;i++)
+            {
+                slide[i].style.display="none";
+            }
+            slide[n-1].style.display="block";
+            var dot=document.getElementsByClassName("dot");
+            for(j=0;j<dot.length;j++)
+            {
+                dot[j].style.background=color="rgb(218, 196, 196)";
+            }
+            dot[n-1].style.background=color="black";
+        }
+        function search()
+        {
+            
+            var str=document.getElementById('name').value;
+            var pos1=str.indexOf("pencil");
+            var pos2=str.indexOf("era");
+            var pos3=str.indexOf("paper");
+            var pos4=str.indexOf("colo");
+            var pos5=str.indexOf("blend");
+            if(pos1!=-1)
+            {
+                window.open("pencil.html");
+            }
+            else if(pos2!=-1)
+            {
+                window.open("eraser.html");
+            }
+            else if(pos3!=-1)
+            {
+                window.open("paper.html");
+            }
+            else if(pos4!=-1)
+            {
+                window.open("color.html");
+            }
+            else if(pos5!=-1)
+            {
+                window.open("blend.html");
+            }
+
+        }
+        function func()
+        {
+            if( document.getElementById('abc').style.display!="block")
+          { document.getElementById('abc').style.display="block";}
+          else
+          { document.getElementById('abc').style.display="none";}
+            
+        }
+        function sign()
+        {
+            if( document.getElementById('sform').style.display!="block")
+          { document.getElementById('sform').style.display="block";}
+          else
+          { document.getElementById('sform').style.display="none";}
+            
+        }
+        fu
+        function fsubmit(){document.getElementById('abc').style.display="none";}
+        function sfsubmit(){document.getElementById('sform').style.display="none";}
+        function validate()
+        {
+            var fname=document.getElementById('rfname').value;
+            if(fname=="")
+            {
+                alert("please enter your name");
+                return false;
+            }
+           
+            var gmail=document.getElementById('rfgmail').value;
+            if(gmail=="")
+            {
+                alert("please enter your gmail");
+                return false;
+            }
+            var pass=document.getElementById('rfpass').value;
+            if(pass=="")
+            {
+                alert("please enter your password");
+                return false;
+            }
+            var cpass=document.getElementById('rfcpass').value;
+            if(cpass=="")
+            {
+                alert("please enter your confirm password");
+                return false;
+            }
+            if(pass!=cpass)
+            {
+                alert("please reconfirm your password");
+                return false;
+            }
+            
+        }
+    </script>
+</body> 
+</html>
