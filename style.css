@@ -4,11 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body
-{
-    
-    padding: 10px;
-}
+
 .nav
 {
     height: 100px;
@@ -184,7 +180,7 @@ html{scroll-behavior: smooth;}
             width: 100%;
             height: auto;
             padding: 10px ;
-            line-height:20px;
+            line-height:15px;
             display: grid;
             grid-template-columns: 1fr;
             align-content: center;
@@ -195,9 +191,9 @@ html{scroll-behavior: smooth;}
             margin: 20px auto;
             
         }
-        .pic h2
+        .pic h3
         {
-            margin: 50px;
+            
             padding: 0;
         }
         .artigal img
